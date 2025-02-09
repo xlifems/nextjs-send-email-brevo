@@ -1,7 +1,9 @@
+import { sendEmail } from "./action";
+
 export default function HomePage() {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <form action="/api/contact" method="post" className="flex flex-col gap-4">
+      <form action={sendEmail} method="POST" className="flex flex-col gap-4">
         <div>
           <label htmlFor="name">Name:</label>
           <input
@@ -34,10 +36,7 @@ export default function HomePage() {
             className="bg-slate-400 block p-2 rounded-md w-full placeholder:text-slate-500"
           ></textarea>
         </div>
-        <button
-          type="submit"
-          className="bg-teal-600 hover:bg-teal-800 text-white p-2 rounded-md"
-        >
+        <button className="bg-teal-600 hover:bg-teal-800 text-white p-2 rounded-md">
           Send Email
         </button>
       </form>
