@@ -1,9 +1,22 @@
-import { sendEmail } from "./action";
+import { handleForm } from "./action";
 
 export default function HomePage() {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <form action={sendEmail} method="POST" className="flex flex-col gap-4">
+      <form action={handleForm} method="POST" className="flex flex-col gap-4">
+
+        <div>
+          <label htmlFor="subject">Subject:</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Enter the subject"
+            required
+            className="bg-slate-400 block p-2 rounded-md w-full placeholder:text-slate-500"
+          />
+        </div>
+
         <div>
           <label htmlFor="name">Name:</label>
           <input
