@@ -21,8 +21,8 @@ export async function sendEmail({ subject, to, htmlContent }: Params) {
   smtpEmail.to = to;
   smtpEmail.htmlContent = `<html><body>${htmlContent}</body></html>`;
   smtpEmail.sender = {
-    name: "Adrian Masa Pico",
-    email: "felixadrianmasa@gmail.com",
+    name: "john doe",
+    email: "example@example.com",
   };
 
   await apiInstance.sendTransacEmail(smtpEmail);
